@@ -1,0 +1,6 @@
+/*全局样式定义*/
+.fixclear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
