@@ -23,7 +23,7 @@
       </div>
       <div class="btn">
         <span @click="usersMsg">登录</span>
-        <span>注册</span>
+        <span @click="toregister">注册</span>
       </div>
     </div>
     <div></div>
@@ -71,7 +71,11 @@ export default {
       });
     },
     goback(routeform) {
-      this.$router.push({path:routeform.path,query:routeform.query});
+      this.$router.push({ path: routeform.path, query: routeform.query }) ||
+        this.$router.push("/index");
+    },
+    toregister() {
+       this.$router.push("/register");
     }
   },
   components: {}

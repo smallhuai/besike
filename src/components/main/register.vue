@@ -1,7 +1,7 @@
 <template>
   <div id="login">
     <div class="toMy">
-      <span>&lt;</span>
+      <span @click="goback(routeform)">&lt;</span>
     </div>
     <div class="centerContent">
       <div class="loginfast">快速注册</div>
@@ -43,6 +43,11 @@ export default {
   },
   created() {},
   mounted() {},
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      vm.routeform = from;
+    });
+  },
   methods: {
     //获取用户信息的函数
     usersMsg() {
@@ -62,7 +67,11 @@ export default {
             }
         });
       }
-    }
+    },
+     goback(routeform) {
+      this.$router.push({ path: routeform.path, query: routeform.query }) ||
+        this.$router.push("/index");
+    },
   },
   components: {}
 };

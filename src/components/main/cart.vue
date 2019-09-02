@@ -240,7 +240,7 @@ export default {
   line-height: r(60);
   font-size: r(14);
   position: fixed;
-  bottom: 1.14rem;
+  bottom: 1.10rem;
   background-color: #fff;
   div:nth-child(1) {
     padding-left: r(20);

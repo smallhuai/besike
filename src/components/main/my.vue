@@ -38,6 +38,7 @@
         </div>收货地址
         <span>></span>
       </div>
+      <div class="exit" @click="exit">退出登录</div>
     </div>
     <div class="kefu">
       <p>客服热线：400-627-5757</p>
@@ -67,6 +68,14 @@ export default {
       next(vm => {
         vm.$router.push("/login");
       });
+    }
+  },
+  methods:{
+    exit(){
+      console.dir(Store);
+      Store.clear("userInfo")
+      //  Store.set("userInfo")='';
+      this.$router.push("/index")
     }
   },
   mounted() {},
@@ -135,5 +144,12 @@ export default {
     width: r(150);
     padding:r(20) 0;
   }
+}
+.exit{
+  height: r(50);
+  line-height: r(50);
+  text-align: center;
+  font-size: r(20);
+  border: 1px solid #999;
 }
 </style>

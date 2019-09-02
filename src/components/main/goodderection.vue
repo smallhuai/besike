@@ -48,7 +48,7 @@
       </div>
     </div>
     <!-- 商品数量 -->
-    <div class="proNum fixclear">
+    <div class="proNum fixclear" v-if="resData.length!=0">
       <div>购买数量</div>
       <div>
         <span @click="sub">-</span>
@@ -69,7 +69,7 @@
     </div>
     <!-- 底部价格开始 -->
     <div class="proPrice">
-      <div v-if="buyPrice.CurrentPrice!='undefined'">{{Num*buyPrice.CurrentPrice}}</div>
+      <div v-if="buyPrice.CurrentPrice!='undefined'">{{Num*buyPrice.CurrentPrice||""}}</div>
       <div>
         <span @click="addcart">加入购物车</span>
         <span @click="toLogin">立即购买</span>

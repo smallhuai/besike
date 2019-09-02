@@ -3,7 +3,7 @@
     <!-- 此页为app首页 -->
     <div class="top">
       <!-- 城市组件选择开始 -->
-      <choosecity></choosecity>
+      <!-- <choosecity></choosecity> -->
       <!-- 轮播组件-->
       <topbanner :SwiperBannerList="SwiperBannerList"></topbanner>
       <!-- 优势图片开始 和吐司活动-->
